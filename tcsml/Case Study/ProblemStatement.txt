@@ -1,0 +1,68 @@
+﻿Scenario 1 : Predicting Likelihood Of ESigning a loan
+
+
+Lending companies work by analyzing the financial history of their loan applicants , and choosing whether or not the application is too risky to be given a loan.
+If the applicant is not, the company then determines the terms of the loan. These applicants are received by company via websites/ apps .Other times , lending companies partner with P2P lending marketplaces, in order to acquire leads of possible 
+applicants . We are going to assess the quality of the  leads receieved through marketplace.
+
+
+
+
+
+
+Goal : Develop a model to predict the 'quality' applicants, those who reach a key part of the loan application process.
+
+
+Objective : Objective Of this case study is to analyze the leads and check what percentage of the leads actually 'e-sign' the application.
+
+
+
+
+
+
+Scenario 2 :Breast Cancer Classification
+
+
+Dataset contains around 30 features like radius,texture, perimeter, area,smoothness etc. And there are 2 target classes : Malignant and Benign.
+
+
+Data :
+# Import Cancer data drom the Sklearn library
+from sklearn.datasets import load_breast_cancer
+cancer = load_breast_cancer()
+
+
+Objective : Analayze different parameters of a tumour and classify tumours into malignant or benign
+
+
+
+
+Scenario 3 : Credit Card Fraud Detection 
+
+
+Anyone can skim a credt card and try to use them for any purchase. The idea is to build a fraud detaction system for a retail store, where based on the previous usage
+ pattern the store can identify if the creadit card user is a fraud or not .
+
+
+Dataset is example of of a highly imbalanced dataset .
+
+
+Example : There ca be rules like, if the card is from USA and being used in China, high chance is that trxn is fraud .
+
+
+
+
+Scenario 4 : Customer Churn Analysis 
+
+
+Subscription products often are the main source of revenue for companies across all industries.Regardless of how they 
+structure their memberships or what industry they are in,companies always try to minimize customer churn.
+
+
+To retain their customers, these companies first need to identify behavioal patterns that act as catayst in disengagement with the product
+
+
+Objective : The goal is to predict which users are likely to churn, so that the company can focus on re engaging these users with their product.
+
+
+we are assigned to identify those customers so that the company can design their promotion for those .
