@@ -42,4 +42,4 @@ def px_graph(df, timeframe=''):
 
 data = process_data()
 df = getTimeSeriesData(data)
-px_graph(df, 'W')
+px_graph(df, 'Q')
