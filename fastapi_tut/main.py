@@ -1,5 +1,6 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, UploadFile, File
 from enum import Enum
+import uvicorn
 app = FastAPI()
 
 @app.get('/hello/{name}')
@@ -18,3 +19,20 @@ class AvailableCuisines(str, Enum):
 @app.get('/get_items/{cuisine}')
 async def get_items(cuisine: AvailableCuisines):
     return food_items[cuisine]
+
+
+@app.post('/predict')
+async def predict(
+    file: UploadFile = File(...)
+):
+    bytes = await file.read()
+    
+
+    return
+
+@app.get('/ping')
+async def ping():
+    return 'The website is alive.'
+
+if __name__ == '__main__':
+    uvicorn.run(app, host='localhost', port=8080)
