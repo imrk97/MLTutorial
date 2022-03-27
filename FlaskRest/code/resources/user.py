@@ -16,11 +16,15 @@ class UserRegister(Resource):
     @classmethod
     def post(cls):
         data = cls.parser.parse_args()
-        if UserModel.find_by_username(data['username']):
-            UserModel(data['username'], data['password']).save_user()
-            return {'message': f'username {data["username"]} created'}
+        user = UserModel.find_by_username(data['username'])
+        print(user)
+        if user is not None :
+            
+            return {'message': f'username {data["username"]} is already there.'}
 
-        return {'message': 'user registered successfully',
-                'user': data
-        }, 201
+
+        user = UserModel(data['username'], data['password'])
+        print(user)
+        user.save_user()
+        return {'message': f'username {data["username"]} created'}
 

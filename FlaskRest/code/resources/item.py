@@ -10,6 +10,9 @@ class Item(Resource):
     parser.add_argument(
         "price", type=float, required=True, help="This field cannot be left blank."
     )
+    parser.add_argument(
+        "store_id", type=int, required=True, help="This field cannot be left blank."
+    )
 
     @jwt_required()
     # @classmethod
@@ -23,7 +26,7 @@ class Item(Resource):
     @classmethod
     def post(cls, name):
         data = cls.parser.parse_args()
-        item = ItemModel(name, data["price"])
+        item = ItemModel(name, data["price"], data['store_id'])
         item.save_to_db()
         return item.json()
 
@@ -32,6 +35,7 @@ class Item(Resource):
         data = cls.parser.parse_args()
         item = ItemModel.find_by_name(name)
         if item:
+            item.store_id = data['store_id']
             item.price = data["price"]
             item.save_to_db()
             return item.json()
