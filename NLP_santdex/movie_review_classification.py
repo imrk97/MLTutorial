@@ -60,6 +60,7 @@ for w in short_neg_words:
     all_words.append(w.lower())
     
 all_words = nltk.FreqDist(all_words)
+print(all_words)
 word_features = list(all_words.keys())[:5000]
 
 

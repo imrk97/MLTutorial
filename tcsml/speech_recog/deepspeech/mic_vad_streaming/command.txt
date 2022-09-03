@@ -1,0 +1,4 @@
+python mic_vad_streaming.py -f male.wav -m C:\Users\rohan\Downloads\deepspeech-0.9.3-models.pbmm -s C:\Users\rohan\Downloads\deepspeech-0.9.3-models.scorer
+
+
+python mic_vad_streaming.py -f male.wav -m C:/Users/rohan/Downloads/deepspeech-0.9.3-models.pbmm -s C:/Users/rohan/Downloads/deepspeech-0.9.3-models.scorer
